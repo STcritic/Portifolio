@@ -15,7 +15,7 @@
     <meta name="description" content="Portfólio de Shelzer Tembe, consultor de Recursos Humanos, sistemas de RH e digitalização de processos.">
     <meta name="author" content="Shelzer Tembe">
 
-    <title>Shelzer Tembe | RH, Sistemas e Digitalização</title>
+    <title>Shelzer Tembe | RH- Sistemas e Digitalização</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,10 +30,10 @@
 <body>
     <div class="site-shell">
         <header class="topbar">
-            <a class="brand" href="#home" aria-label="Voltar ao início">
-                <span class="brand-mark">ST</span>
+            <a class="brand" href="#home" aria-label="Voltar ao início" translate="no">
+                <span class="brand-mark" translate="no">ST</span>
                 <span class="brand-copy">
-                    <strong>Shelzer Tembe</strong>
+                    <strong translate="no">Shelzer Tembe</strong>
                     <span>HR Systems Consultant</span>
                 </span>
             </a>
@@ -43,13 +43,26 @@
                 <span></span>
             </button>
 
-            <nav class="nav" id="site-nav">
-                <a href="#about">Perfil</a>
-                <a href="#services">Serviços</a>
-                <a href="#journey">Percurso</a>
-                <a href="#insights">Insights</a>
-                <a href="#contact" class="nav-cta">Contactar</a>
-            </nav>
+            <div class="topbar-actions">
+                <nav class="nav" id="site-nav">
+                    <a href="#about">Perfil</a>
+                    <a href="#services">Serviços</a>
+                    <a href="#journey">Percurso</a>
+                    <a href="#insights">Insights</a>
+                    <a href="#contact" class="nav-cta">Contactar</a>
+                </nav>
+
+                <div class="language-switcher" data-language-switcher>
+                    <button class="language-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+                        <span class="ti-world" aria-hidden="true"></span>
+                        <span>Idioma</span>
+                    </button>
+                    <div class="language-menu" role="menu" aria-label="Selecionar idioma">
+                        <a class="language-option" href="index.html" data-language="pt" role="menuitem">Português</a>
+                        <a class="language-option" href="#" data-language="en" role="menuitem" rel="noopener">English</a>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main id="home">
@@ -64,7 +77,7 @@
 
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="#contact">Vamos conversar</a>
-                        <a class="btn btn-secondary" href="pdf/Shelzer_Tembe _cv.pdf" target="_blank" rel="noopener">Ver CV completo</a>
+                        <a class="btn btn-secondary" href="pdf/Shelzer_Tembe _cv.pdf" target="_blank" rel="noopener" translate="no">Ver CV completo</a>
                     </div>
 
                     <div class="hero-proof">
@@ -82,6 +95,9 @@
                 <div class="hero-visual reveal reveal-delay">
                     <div class="portrait-panel">
                         <div class="portrait-glow"></div>
+                        <div class="hero-orb" aria-hidden="true">
+                            <span class="hero-orb-core"></span>
+                        </div>
                         <img src="assets/imgs/avatar.jpg" alt="Retrato de Shelzer Tembe" class="portrait">
 
                         <div class="floating-card card-a">
@@ -99,7 +115,7 @@
 
             <section class="trust-strip reveal" aria-label="Áreas de atuação">
                 <span>Implementação de sistemas</span>
-                <span>Experiência do colaborador</span>
+                <span>Experiência do colaborador/UX</span>
                 <span>Processos e documentação</span>
                 <span>Suporte operacional</span>
                 <span>Transformação digital</span>
@@ -189,24 +205,24 @@
             <section class="section impact-section">
                 <div class="section-heading reveal">
                     <p class="eyebrow">Impacto</p>
-                    <h2>Uma presença profissional voltada para evolução operacional, não apenas presença online.</h2>
+                    <h2>O valor que levo para organizações que querem processos de RH mais simples, digitais e bem executados.</h2>
                 </div>
 
                 <div class="impact-grid">
                     <article class="impact-card reveal">
                         <span class="impact-number">01</span>
-                        <h3>Processos mais fluídos</h3>
-                        <p>Redução de fricção em tarefas administrativas com foco em consistência, organização e continuidade.</p>
+                        <h3>Processos mais organizados</h3>
+                        <p>Ajudo a transformar rotinas confusas em processos mais claros, consistentes e fáceis de acompanhar.</p>
                     </article>
                     <article class="impact-card reveal">
                         <span class="impact-number">02</span>
-                        <h3>Adoção mais humana</h3>
-                        <p>Digitalização com atenção às pessoas que usam o sistema, não apenas à ferramenta em si.</p>
+                        <h3>Melhor uso dos sistemas</h3>
+                        <p>Faço a ponte entre a ferramenta e as pessoas, para que a tecnologia seja realmente usada no dia a dia.</p>
                     </article>
                     <article class="impact-card reveal">
                         <span class="impact-number">03</span>
-                        <h3>Execução com visão híbrida</h3>
-                        <p>Capacidade de navegar entre RH, tecnologia, atendimento e documentação no mesmo projeto.</p>
+                        <h3>Execução com apoio prático</h3>
+                        <p>Contribuo com suporte, documentação e melhoria contínua para que as operações avancem com mais segurança.</p>
                     </article>
                 </div>
             </section>
@@ -268,6 +284,13 @@
                         <p>Uma nota pessoal sobre adaptação, reinvenção e crescimento profissional em contextos desafiantes.</p>
                         <span class="insight-link">Ler artigo</span>
                     </a>
+
+                    <a class="insight-card reveal" href="rh-inteligencia-artificial.html">
+                        <span class="insight-tag">IA em RH</span>
+                        <h3>Como a inteligência artificial pode apoiar um RH mais estratégico e mais humano.</h3>
+                        <p>Uma reflexão sobre automação, análise de dados e o cuidado necessário para usar IA sem perder o foco nas pessoas.</p>
+                        <span class="insight-link">Ler artigo</span>
+                    </a>
                 </div>
             </section>
 
@@ -283,13 +306,13 @@
                     </div>
 
                     <div class="cta-actions">
-                        <a class="btn btn-primary" href="mailto:shelzertembe.mz@gmail.com?subject=Contacto%20via%20portf%C3%B3lio">Enviar email</a>
-                        <a class="btn btn-secondary" href="https://www.linkedin.com/in/shelzer-tembe-0a6648215/" target="_blank" rel="noopener">LinkedIn</a>
+                        <a class="btn btn-primary" href="mailto:shelzertembe.mz@gmail.com?subject=Contacto%20via%20portf%C3%B3lio" translate="no">Enviar email</a>
+                        <a class="btn btn-secondary" href="https://www.linkedin.com/in/shelzer-tembe-0a6648215/" target="_blank" rel="noopener" translate="no">LinkedIn</a>
                     </div>
 
                     <div class="contact-meta">
-                        <span><i class="ti-email"></i> shelzertembe.mz@gmail.com</span>
-                        <span><i class="ti-mobile"></i> +258 87 902 6770</span>
+                        <span translate="no"><i class="ti-email"></i> shelzertembe.mz@gmail.com</span>
+                        <span translate="no"><i class="ti-mobile"></i> +258 87 902 6770</span>
                         <span><i class="ti-map-alt"></i> Maputo, Moçambique</span>
                     </div>
                 </div>

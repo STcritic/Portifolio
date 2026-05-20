@@ -115,6 +115,94 @@ a {
     align-items: center;
 }
 
+.language-switcher {
+    position: relative;
+}
+
+.language-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 0 16px;
+    border: 1px solid rgba(18, 48, 51, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(20, 32, 35, 0.04);
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    display: none;
+    min-width: 170px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 18px;
+    background: rgba(255, 253, 248, 0.96);
+    box-shadow: 0 20px 40px rgba(20, 32, 35, 0.12);
+    backdrop-filter: blur(14px);
+}
+
+.language-switcher.is-open .language-menu {
+    display: grid;
+    gap: 6px;
+}
+
+.language-option {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 12px;
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+    color: var(--text);
+    background: rgba(21, 125, 116, 0.06);
+}
+
+.translation-toast {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 60;
+    width: min(360px, calc(100vw - 32px));
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 18px;
+    background: rgba(23, 53, 56, 0.92);
+    color: #f6f7f2;
+    box-shadow: 0 24px 50px rgba(20, 32, 35, 0.22);
+    backdrop-filter: blur(14px);
+}
+
+.translation-toast strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.92rem;
+}
+
+.translation-toast p {
+    margin: 0;
+    color: rgba(246, 247, 242, 0.82);
+    line-height: 1.6;
+    font-size: 0.88rem;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -411,7 +499,19 @@ a {
         align-items: stretch;
     }
 
-    .top-actions .btn {
+    .top-actions .btn,
+    .language-toggle {
         width: 100%;
+    }
+
+    .language-menu {
+        left: 0;
+        right: auto;
+        min-width: 100%;
+    }
+
+    .translation-toast {
+        right: 16px;
+        bottom: 16px;
     }
 }

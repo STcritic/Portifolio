@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/article.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -27,15 +28,25 @@
 <body>
     <div class="page-shell">
         <header class="topbar">
-            <a class="brand" href="index.html" aria-label="Voltar ao portfólio">
-                <span class="brand-mark">ST</span>
+            <a class="brand" href="index.html" aria-label="Voltar ao portfólio" translate="no">
+                <span class="brand-mark" translate="no">ST</span>
                 <span class="brand-copy">
-                    <strong>Shelzer Tembe</strong>
+                    <strong translate="no">Shelzer Tembe</strong>
                     <span>Recursos Humanos, sistemas e digitalização</span>
                 </span>
             </a>
 
             <div class="top-actions">
+                <div class="language-switcher" data-language-switcher>
+                    <button class="language-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+                        <span class="ti-world" aria-hidden="true"></span>
+                        <span>Idioma</span>
+                    </button>
+                    <div class="language-menu" role="menu" aria-label="Selecionar idioma">
+                        <a class="language-option" href="decidi-estudar-direito.html" data-language="pt" role="menuitem">Português</a>
+                        <a class="language-option" href="#" data-language="en" role="menuitem" rel="noopener">English</a>
+                    </div>
+                </div>
                 <a class="btn btn-secondary" href="index.html#insights">Voltar aos insights</a>
                 <a class="btn btn-primary" href="index.html#contact">Contactar</a>
             </div>
