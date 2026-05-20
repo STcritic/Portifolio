@@ -9,6 +9,8 @@ const languageSwitchers = document.querySelectorAll('[data-language-switcher]');
 let translationToastTimeout = null;
 const isLocalTranslationBlocked = ['file:', 'http:', 'https:'].includes(window.location.protocol)
     && ['localhost', '127.0.0.1'].includes(window.location.hostname);
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const hasNativeEnglishHome = currentPage === 'index.html' || currentPage === 'index-en.html';
 
 const showTranslationToast = (title, message) => {
     const existingToast = document.querySelector('.translation-toast');
@@ -59,9 +61,14 @@ languageSwitchers.forEach((switcher) => {
         return;
     }
 
-    portugueseLink.href = window.location.pathname.split('/').pop() || 'index.html';
+    if (hasNativeEnglishHome) {
+        portugueseLink.href = 'index.html';
+        englishLink.href = 'index-en.html';
+    } else {
+        portugueseLink.href = currentPage;
+    }
 
-    if (window.location.protocol === 'file:' || isLocalTranslationBlocked) {
+    if (!hasNativeEnglishHome && (window.location.protocol === 'file:' || isLocalTranslationBlocked)) {
         englishLink.href = '#';
         englishLink.addEventListener('click', (event) => {
             event.preventDefault();
@@ -72,7 +79,7 @@ languageSwitchers.forEach((switcher) => {
                 'Para traduzir esta página, abra o portfólio numa versão publicada na internet. Endereços locais como este não podem ser traduzidos dessa forma.'
             );
         });
-    } else {
+    } else if (!hasNativeEnglishHome) {
         englishLink.href = `https://translate.google.com/translate?sl=pt&tl=en&u=${encodeURIComponent(window.location.href)}`;
     }
 
