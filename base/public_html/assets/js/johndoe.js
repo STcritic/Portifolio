@@ -27,7 +27,7 @@ $(document).ready(function(){
             }, 700, function(){
                 window.location.hash = hash;
             });
-        } 
+        }
     });
 });
 
@@ -54,4 +54,3 @@ $(window).on("load", function() {
         }), !1
     });
 });
-
